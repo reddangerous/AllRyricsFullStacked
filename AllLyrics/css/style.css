@@ -64,7 +64,7 @@ hr{
 }
 
 
-.pad {padding: 130px 0px;}
+/*.pad {padding: 130px 0px;}
 
 .parallax-one { background: url('../img/promo/p1.jpg') fixed 50%;}
 .parallax-two { background: url('../img/background/overlay.png'), url('../img/promo/p2.jpg') fixed 50%;}
@@ -436,6 +436,27 @@ hr{
 }
 
 
+.card{
+	background-color: #242c38;
+	border-radius: 4px;
+	box-shadow: 0 1px 2px rgba(0,0,0,.05);
+	margin-bottom: 30px;
+	color: #fff;
+	margin-top: 30px;
+	padding: 20px;
+	
+
+}
+.card .h1 {
+	color: #fff;
+}
+.card ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	color: #fff;
+}
+
 /* promo */
 
 .promo .promo-element {
@@ -473,25 +494,30 @@ hr{
 /* featured album */
 
 .featured .featured-item {
-	max-width: 450px;
-	margin: 0 auto;
-	margin-top: 30px;
-	padding-bottom: 30px;
+	width: 400px;
+	height: auto !important;
+	
+	
 }
 
 .featured .featured-item .figure {
-	position: relative;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
 	overflow: hidden;
+	margin-top: 0px;
+	margin: 0 auto;
 }
 
 .featured .featured-item .figure p {
 	position: absolute;
 	bottom: 0;
-	right: 0;
 	margin-bottom: 10%;
 	margin-right: 10%;
 	width: 80%;
-	height: 80%;
+	height: auto !important;
 	padding: 20px 25px;
 	color: #fff;
 	border: 10px solid #fff;
@@ -508,13 +534,17 @@ hr{
 
 .featured .featured-item:hover .figure p {
 	opacity:1;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	
+
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 }
 
 .featured-item .featured-item-info h4 {
-	margin-top: 30px;
-	font-size: 28px;
-	line-height: 40px;
+	margin-top: 8px;
+	font-size: 24px;
+	line-height: 10px;
 	text-align: center;
 	font-weight: 300;
 	text-transform: uppercase;
@@ -522,7 +552,7 @@ hr{
 
 .featured-item .featured-item-info hr {
 	max-width: 60px;
-	margin: 20px auto;
+	margin: 5px auto;
 	border-top: 4px solid #ddd;
 }
 
