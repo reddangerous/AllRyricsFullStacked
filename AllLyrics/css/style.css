@@ -493,74 +493,36 @@ hr{
 
 /* featured album */
 
-.featured .featured-item {
-	width: 400px;
-	height: auto !important;
-	
-	
-}
-
-.featured .featured-item .figure {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	flex-wrap: wrap;
-	overflow: hidden;
-	margin-top: 0px;
-	margin: 0 auto;
-}
-
-.featured .featured-item .figure p {
-	position: absolute;
-	bottom: 0;
-	margin-bottom: 10%;
-	margin-right: 10%;
-	width: 80%;
-	height: auto !important;
-	padding: 20px 25px;
-	color: #fff;
-	border: 10px solid #fff;
-	font-size: 16px;
-	line-height: 28px;
-	opacity:0;
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-	-webkit-transition: all 0.5s ease-out;
-	-moz-transition: all 0.5s ease-out;
-	-ms-transition: all 0.5s ease-out;
-	-o-transition: all 0.5s ease-out;
-	transition: all 0.5s ease-out;
-}
-
-.featured .featured-item:hover .figure p {
-	opacity:1;
-	overflow-y: scroll;
-	overflow-x: hidden;
-	
-
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-}
-
-.featured-item .featured-item-info h4 {
-	margin-top: 8px;
-	font-size: 24px;
-	line-height: 10px;
+.featured-item-info h4 {
+	margin-top: 0px;	
+	font-size: 20px;
+	line-height: 30px;
 	text-align: center;
 	font-weight: 300;
 	text-transform: uppercase;
+	color: #fff;
+	background-color: #000;
 }
 
-.featured-item .featured-item-info hr {
-	max-width: 60px;
-	margin: 5px auto;
-	border-top: 4px solid #ddd;
+
+
+.featured-item {
+    width: 350px;
+    margin: 10px;
+    border: 3px solid #aaa;
+    overflow: hidden;
 }
 
-.featured-item .featured-item-info p {
-	font-size: 16px;
-	font-weight: 700;
-	text-align: center;
+.featured-item-info {
+    padding: 20px;
+    background-color: #242c38;
+	color: #fff;
+    height: 300px;
+    overflow: auto;
+    text-align: center;
+	margin-top: 0px;
 }
+
 
 /* news letter / subscribe */
 .news-letter {
@@ -1153,7 +1115,16 @@ footer .copy-right {
 	
 	.meet .meet-map .map-marker img {max-width: 15px !important;}
 }
+ .featured-item {
+        width: 100%;
+        margin: 10px;
+        margin-bottom: 20px;
+    }
 
+    .featured-item-info {
+        height: 200px;
+        overflow: auto;
+    }
 /*
  * Tablets 
  */

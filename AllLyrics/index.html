@@ -126,7 +126,7 @@
 								<li><a href="#lyrics">Lyrics</a></li>
 								<li><a href="#team">Team</a></li>
 								<li><a href="#contact">Contact</a></li>
-								<li><a href="#contact">Admin</a></li>
+								<li><a href="/admin.html">Admin</a></li>
 							</ul>
 						</div><!-- /.navbar-collapse -->
 					</div><!-- /.container-fluid -->
@@ -225,7 +225,7 @@
 								</div>
 
 								<!-- Add a loading message element -->
-									<div id="loading-message"><h1 class="h1">Loading songs...</h1></div>
+									<div id="loading-message" class="h1">Loading songs...</div>
 
 										<script>
 										const songsList = document.getElementById('songs');
@@ -240,7 +240,7 @@
 										}
 
 										// fetch songs from backend and add to the list
-										url = 'http://localhost:8000/music';
+										url = 'http://localhost:9000/music';
 										Headers = {
 											'Content-Type': 'application/json',
 											'Accept': 'application/json',
@@ -308,6 +308,7 @@
 					<div class="featured-element">
 						<div class="row" id="lyrics-container">
 							<!-- lyrics items will be added here -->
+							
 							</div>
 
 							<script>
@@ -315,26 +316,23 @@
 
 							// function to add a lyrics item to the container
 							function addLyricsItem(song) {
-								const item = document.createElement('div');
-								item.className = 'featured-item';
-								item.style.width = '400px';
-								item.style.flexWrap = 'wrap';
-								item.style.flexDirection = 'row';
-								item.style.margin= '10px';
-								item.style.alignItems = 'center';
-								item.innerHTML = `
-								<div class="figure">
-									<img class="img-responsive" src="img/featured/1.jpg" alt="" />
-									<div class="featured-item-info">
-									<h4>${song.music_title}</h4><h5>${song.artist}</h5><p>${song.lyrics}</p>
-									</div>
-								</div>
-								`;
-								lyricsContainer.appendChild(item);
-							}
+									const item = document.createElement('div');
+									item.className = 'col-md-4 col-sm-6';
+									item.innerHTML = `
+										<div class="featured-item">
+											<div class="featured-item-info">
+												<h4>${song.music_title}</h4>
+												<h5>${song.artist}</h5>
+												<p>${song.lyrics}</p>
+											</div>
+										</div>
+									`;
+									lyricsContainer.appendChild(item);
+								}
+
 
 							// fetch all lyrics from backend and add to the container
-							url = 'http://localhost:8000/music';
+							url = 'http://localhost:9000/music';
 							Headers = {
 								'Content-Type': 'application/json',
 								'Accept': 'application/json',
@@ -351,32 +349,9 @@
 							</script>
 
 			</div>
-			<!-- features end -->
-			
-			<!-- call to action -->
-			<div class="cta parallax-one pad">
-				<div class="container">
-					<!-- cta element -->
-					<div class="cta-element ">
-						<div class="row">
-							<div class="col-md-9 col-sm-8">
-								<!-- heading -->
-								<h3>Melodi, A Fully Rock Album Pro</h3>
-								<!-- paragraph -->
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim sectetur adipiscing elit, sed do eiusmod tempoad minim veniam consequat.</p>
-							</div>
-							<div class="col-md-3 col-sm-4">
-								<div class="cta-btn text-center">
-									<!-- purchase now button -->
-									<a href="#" class="btn btn-default btn-lg">Download Now</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!--/ cta end -->
-			
+
+		
+			<!-- features end -->			
 			<!-- work with us -->
 			<div class="work-with-us pad" id="joinus">
 				<div class="container">
@@ -426,7 +401,7 @@
 						<!-- apply button -->
 						<div class="apply-btn">
 							<!-- button line -->
-							<a class="btn btn-lg btn-theme" href="#">Join Now</a>
+							<a class="btn btn-lg btn-theme" href="Signup">Join Now</a>
 						</div>
 					</div>
 				</div>
@@ -455,297 +430,8 @@
 				</div>
 			</div>
 			<!-- news letter end -->
-			
-			<div class="portfolio pad" id="portfolio">
-				<div>
-					<!-- default heading -->
-					<div class="default-heading">
-						<!-- heading -->
-						<h2>Portfolio</h2>
-					</div>
-				</div>
-				<!-- portfolio -->
-				<div class="portfolio-content" id="portfolioOwl">
-					<div class="item">
-						<!-- item image -->
-						<img class="img-responsive" src="img/portfolio/1.jpg" alt="">
-						<!-- transparent background -->
-						<div class="p-transparent"></div>
-						<!-- on mouse hover details -->
-						<div class="p-hover">
-							<!-- heading /title -->
-							<h3>Album Title</h3><hr>
-							<!-- project details -->
-							<p>Some details about album.</p>
-							<!-- icon -->
-							<a href="#"><i class="fa fa-share"></i></a>
-						</div>
-					</div>
-					<div class="item">
-						<!-- item image -->
-						<img class="img-responsive" src="img/portfolio/2.jpg" alt="">
-						<!-- transparent background -->
-						<div class="p-transparent"></div>
-						<!-- on mouse hover details -->
-						<div class="p-hover">
-							<!-- heading /title -->
-							<h3>Album Title</h3><hr>
-							<!-- project details -->
-							<p>Some details about album.</p>
-							<!-- icon -->
-							<a href="#"><i class="fa fa-share"></i></a>
-						</div>
-					</div>
-					<div class="item">
-						<!-- item image -->
-						<img class="img-responsive" src="img/portfolio/3.jpg" alt="">
-						<!-- transparent background -->
-						<div class="p-transparent"></div>
-						<!-- on mouse hover details -->
-						<div class="p-hover">
-							<!-- heading /title -->
-							<h3>Album Title</h3><hr>
-							<!-- project details -->
-							<p>Some details about album.</p>
-							<!-- icon -->
-							<a href="#"><i class="fa fa-share"></i></a>
-						</div>
-					</div>
-					<div class="item">
-						<!-- item image -->
-						<img class="img-responsive" src="img/portfolio/4.jpg" alt="">
-						<!-- transparent background -->
-						<div class="p-transparent"></div>
-						<!-- on mouse hover details -->
-						<div class="p-hover">
-							<!-- heading /title -->
-							<h3>Album Title</h3><hr>
-							<!-- project details -->
-							<p>Some details about album.</p>
-							<!-- icon -->
-							<a href="#"><i class="fa fa-share"></i></a>
-						</div>
-					</div>
-					<div class="item">
-						<!-- item image -->
-						<img class="img-responsive" src="img/portfolio/5.jpg" alt="">
-						<!-- transparent background -->
-						<div class="p-transparent"></div>
-						<!-- on mouse hover details -->
-						<div class="p-hover">
-							<!-- heading /title -->
-							<h3>Album Title</h3><hr>
-							<!-- project details -->
-							<p>Some details about album.</p>
-							<!-- icon -->
-							<a href="#"><i class="fa fa-share"></i></a>
-						</div>
-					</div>
-					<div class="item">
-						<!-- item image -->
-						<img class="img-responsive" src="img/portfolio/6.jpg" alt="">
-						<!-- transparent background -->
-						<div class="p-transparent"></div>
-						<!-- on mouse hover details -->
-						<div class="p-hover">
-							<!-- heading /title -->
-							<h3>Album Title</h3><hr>
-							<!-- project details -->
-							<p>Some details about album.</p>
-							<!-- icon -->
-							<a href="#"><i class="fa fa-share"></i></a>
-						</div>
-					</div>
-					<div class="item">
-						<!-- item image -->
-						<img class="img-responsive" src="img/portfolio/7.jpg" alt="">
-						<!-- transparent background -->
-						<div class="p-transparent"></div>
-						<!-- on mouse hover details -->
-						<div class="p-hover">
-							<!-- heading /title -->
-							<h3>Album Title</h3><hr>
-							<!-- project details -->
-							<p>Some details about album.</p>
-							<!-- icon -->
-							<a href="#"><i class="fa fa-share"></i></a>
-						</div>
-					</div>
-					<div class="item">
-						<!-- item image -->
-						<img class="img-responsive" src="img/portfolio/8.jpg" alt="">
-						<!-- transparent background -->
-						<div class="p-transparent"></div>
-						<!-- on mouse hover details -->
-						<div class="p-hover">
-							<!-- heading /title -->
-							<h3>Album Title</h3><hr>
-							<!-- project details -->
-							<p>Some details about album.</p>
-							<!-- icon -->
-							<a href="#"><i class="fa fa-share"></i></a>
-						</div>
-					</div>
-				</div>
-				<div class="text-center">
-					<a href="#" class="btn btn-lg btn-theme">View more</a>
-				</div>
-				<!-- portfolio end -->
-			</div>
+		
 			<!-- work with us end -->
-			
-			<!-- events -->
-			<div class="events parallax-three pad" id="events">
-				<div class="container">
-					<!-- default heading -->
-					<div class="default-heading-shadow">
-						<!-- heading -->
-						<h2>Coming Events</h2>
-					</div>
-					<!-- events element -->
-					<div class="events-element">
-						<div class="row">
-							<div class="col-md-6 col-sm-6">
-								<!-- event item -->
-								<div class="events-item ">
-									<!-- image container -->
-									<div class="figure">
-										<!-- event date -->
-										<div class="event-date">
-											24 <span class="emonth">Jan</span>
-											<div class="clearfix"></div>
-											<!-- time -->
-											<span class="etime">06:30 pm</span>
-										</div>
-										<!-- event location -->
-										<span class="event-location"><i class="fa fa-map-marker"></i> New York</span>
-										<!-- image -->
-										<img class="img-responsive" src="img/event/1.jpg" alt="" />
-										<!-- image hover -->
-										<div class="img-hover">
-											<!-- hover icon -->
-											<a href="#"><i class="fa fa-play-circle"></i></a>
-										</div>
-									</div>
-									<!-- event information -->
-									<div class="event-info">
-										<!-- event title -->
-										<h3>Sound Of melodi In Instrumesnts</h3>
-										<!-- horizontal line --><hr />
-										<!-- paragraph -->
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, sed doconsect etur eiusmod teme et dolore magna aliqua... <a href="#">more</a></p>
-										<!-- buy ticket button link -->
-										<button href="#bookTicket" class="btn btn-lg btn-theme" data-toggle="modal" >Book Ticket</button>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6 col-sm-6">
-								<!-- event item -->
-								<div class="events-item ">
-									<!-- image container -->
-									<div class="figure">
-										<!-- event date -->
-										<div class="event-date">
-											31 <span class="emonth">Jan</span>
-											<div class="clearfix"></div>
-											<!-- time -->
-											<span class="etime">09:45 pm</span>
-										</div>
-										<!-- event location -->
-										<span class="event-location"><i class="fa fa-map-marker"></i> Romania</span>
-										<!-- image -->
-										<img class="img-responsive" src="img/event/2.jpg" alt="" />
-										<!-- image hover -->
-										<div class="img-hover">
-											<!-- hover icon -->
-											<a href="#"><i class="fa fa-play-circle"></i></a>
-										</div>
-									</div>
-									<!-- event information -->
-									<div class="event-info">
-										<!-- event title -->
-										<h3>Rock Music Festival at City Life Mall</h3>
-										<!-- horizontal line --><hr />
-										<!-- paragraph -->
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, sed doconsect etur eiusmod teme et dolore magna aliqua... <a href="#">more</a></p>
-										<!-- buy ticket button link -->
-										<button href="#bookTicket" class="btn btn-lg btn-theme" data-toggle="modal" >Book Ticket</button>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6 col-sm-6">
-								<!-- event item -->
-								<div class="events-item ">
-									<!-- image container -->
-									<div class="figure">
-										<!-- event date -->
-										<div class="event-date">
-											14 <span class="emonth">Feb</span>
-											<div class="clearfix"></div>
-											<!-- time -->
-											<span class="etime">10:30 am</span>
-										</div>
-										<!-- event location -->
-										<span class="event-location"><i class="fa fa-map-marker"></i> New Delhi</span>
-										<!-- image -->
-										<img class="img-responsive" src="img/event/3.jpg" alt="" />
-										<!-- image hover -->
-										<div class="img-hover">
-											<!-- hover icon -->
-											<a href="#"><i class="fa fa-play-circle"></i></a>
-										</div>
-									</div>
-									<!-- event information -->
-									<div class="event-info">
-										<!-- event title -->
-										<h3>Fashion Show Light At Hollywood</h3>
-										<!-- horizontal line --><hr />
-										<!-- paragraph -->
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, sed doconsect etur eiusmod teme et dolore magna aliqua... <a href="#">more</a></p>
-										<!-- buy ticket button link -->
-										<button href="#bookTicket" class="btn btn-lg btn-theme" data-toggle="modal" >Book Ticket</button>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6 col-sm-6">
-								<!-- event item -->
-								<div class="events-item ">
-									<!-- image container -->
-									<div class="figure">
-										<!-- event date -->
-										<div class="event-date">
-											31 <span class="emonth">Mar</span>
-											<div class="clearfix"></div>
-											<!-- time -->
-											<span class="etime">10:00 pm</span>
-										</div>
-										<!-- event location -->
-										<span class="event-location"><i class="fa fa-map-marker"></i> New Delhi</span>
-										<!-- image -->
-										<img class="img-responsive" src="img/event/4.jpg" alt="" />
-										<!-- image hover -->
-										<div class="img-hover">
-											<!-- hover icon -->
-											<a href="#"><i class="fa fa-play-circle"></i></a>
-										</div>
-									</div>
-									<!-- event information -->
-									<div class="event-info">
-										<!-- event title -->
-										<h3>Fashion Show Light At Hollywood</h3>
-										<!-- horizontal line --><hr />
-										<!-- paragraph -->
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, sed doconsect etur eiusmod teme et dolore magna aliqua... <a href="#">more</a></p>
-										<!-- buy ticket button link -->
-										<button href="#bookTicket" class="btn btn-lg btn-theme" data-toggle="modal" >Book Ticket</button>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- events end -->
 			
 			<!-- about -->
 			<div class="about" id="team">
