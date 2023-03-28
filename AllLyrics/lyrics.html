@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Panel</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <a class="navbar-brand" href="#">Admin Panel</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/users.html">Users</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Lyrics</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Settings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <h1>Allyrics Control Panel</h1>
+    <table id="lyrics-table" class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Music Title</th>
+      <th>Artist</th>
+      <th>Lyrics</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+  <button id="delete-selected-btn" class="btn btn-danger">Delete Selected</button>
+  <button id="edit-lyrics-button" class="btn btn-primary">Edit Selected</button>
+  <form id="add-lyric-form" class="mt-4">
+  <div class="form-group">
+    <label for="music-title-input">Music Title</label>
+    <input type="text" class="form-control" id="music-title-input" name="music_title" required>
+  </div>
+  <div class="form-group">
+    <label for="artist-input">Artist</label>
+    <input type="text" class="form-control" id="artist-input" name="artist" required>
+  </div>
+  <div class="form-group">
+    <label for="lyrics-input">Lyrics</label>
+    <textarea class="form-control" id="lyrics-input" name="lyrics" rows="5" required></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Add Lyrics</button>
+</form>
+<!-- Edit form -->
+<form id="edit-lyric-form" class="d-none">
+  <input id="edit-lyric-id">
+  <div class="form-group">
+    <label for="edit-music-title">Music Title</label>
+    <input type="text" class="form-control" id="edit-music-title" name="music_title">
+  </div>
+  <div class="form-group">
+    <label for="edit-artist">Artist</label>
+    <input type="text" class="form-control" id="edit-artist" name="artist">
+  </div>
+  <div class="form-group">
+    <label for="edit-lyrics">Lyrics</label>
+    <textarea class="form-control" id="edit-lyrics" rows="4" name="lyrics"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Save Changes</button>
+  <button id="cancel-edit-btn" type="button" class="btn btn-secondary">Cancel</button>
+</form>
+
+<script  src="add-lyrics.js"></script>
+<script 
+src="lyrics.js"
+>
+</script>
+</body>
+</html>
